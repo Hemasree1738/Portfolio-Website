@@ -2,7 +2,8 @@
 
 A personal portfolio website with a **neon lights + glassmorphism** design, a **dark/light theme toggle**, and highly reactive hover effects. Built with plain HTML, CSS and JavaScript. No frameworks, no build tools.
 
-🔗 **Live site:** https://hemasree-portfoilio-website.netlify.app/
+🔗 **Live site:** 
+hemasree-portfoilio-website.netlify.app
 
 ---
 
