@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hemasree Randhi - Portfolio</title>
+    <meta name="description" content="Personal portfolio website of Hemasree Randhi, a Computer Science student passionate about Machine Learning and Cyber Security." />
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Hemasree Randhi - Portfolio" />
+    <meta property="og:description" content="Personal portfolio website of Hemasree Randhi, a Computer Science student passionate about Machine Learning and Cyber Security." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Space Grotesk (Headings), Inter (Body), JetBrains Mono (Accents/Code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons via CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Custom Glowing Cursor (Desktop Only) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- Floating Background Glowing Orbs -->
+    <div class="ambient-background" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <!-- ======================================================================
+         1. NAVBAR (Sticky Glass + Theme Toggle + Mobile Menu)
+         ====================================================================== -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <!-- Logo / Brand Wordmark -->
+        <a href="#home" class="nav-brand" aria-label="Hemasree Randhi Home">
+          <div class="brand-badge">HR</div>
+          <span>Hemasree Randhi</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Navbar Actions (Theme Toggle & Mobile Hamburger) -->
+        <div class="nav-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Switch between dark and light mode"
+            title="Toggle theme"
+          >
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+          </button>
+
+          <button
+            id="mobile-menu-btn"
+            class="mobile-menu-btn"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Slide-In Glass Drawer -->
+    <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+    <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </aside>
+
+    <main>
+      <!-- ====================================================================
+           2. HERO SECTION (Text-Based, Hexagon HR Badge, No Photo)
+           ==================================================================== -->
+      <section id="home" class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <!-- Left: Hero Text & Call to Actions -->
+            <div class="hero-content fade-in">
+              <!-- Status Chip -->
+              <div class="hero-status-pill">
+                <span class="status-dot-pulse" aria-hidden="true"></span>
+                <span>Open to internships and opportunities</span>
+              </div>
+
+              <!-- Animated Gradient Name -->
+              <h1 class="hero-name">
+                Hi, I'm <span class="gradient-text">Hemasree Randhi</span>
+              </h1>
+
+              <!-- Interactive Typing Animation Subheading -->
+              <div class="hero-typed-wrapper" aria-live="polite">
+                <span>I'm a </span>
+                <span id="typed-text" class="typed-text">Computer Science Student</span>
+                <span class="typed-cursor">|</span>
+              </div>
+
+              <!-- Tagline -->
+              <p class="hero-tagline">
+                2nd year CS student passionate about Machine Learning and Cyber Security.
+              </p>
+
+              <!-- Currently Learning Note -->
+              <div class="hero-learning-note">
+                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                <span>Currently learning: Machine Learning &amp; Cyber Security</span>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                  <span>View Projects</span>
+                  <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a href="#contact" class="btn-secondary">
+                  <span>Contact Me</span>
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                </a>
+              </div>
+
+              <!-- Social Links -->
+              <div class="hero-socials" aria-label="Social profiles">
+                <a
+                  href="https://github.com/Hemasree1738"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon-btn"
+                  aria-label="GitHub Profile"
+                  title="GitHub"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/hemasree-randhi-8777933b3/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon-btn"
+                  aria-label="LinkedIn Profile"
+                  title="LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="mailto:hemasreerandhi1738@gmail.com"
+                  class="social-icon-btn"
+                  aria-label="Send Email"
+                  title="Email"
+                >
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://www.kaggle.com/hemasree38"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon-btn"
+                  aria-label="Kaggle Profile"
+                  title="Kaggle"
+                >
+                  <i class="fa-brands fa-kaggle" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://www.hackerrank.com/profile/hemasree_r_29"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon-btn"
+                  aria-label="HackerRank Profile"
+                  title="HackerRank"
+                >
+                  <i class="fa-brands fa-hackerrank" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Text-Based Glowing Initials Badge (NO PHOTO) -->
+            <div class="hero-visual fade-in">
+              <div class="glass-panel tilt-card hero-visual-card">
+                <div class="initials-hexagon-wrapper">
+                  <div class="hex-glow-ring" aria-hidden="true"></div>
+                  <div class="initials-hexagon">
+                    <span class="initials-text">HR</span>
+                  </div>
+                </div>
+                <h2 class="hero-badge-caption">Hemasree Randhi</h2>
+                <p class="hero-badge-sub">Sai University &middot; B.Tech Computer Science</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           3. ABOUT SECTION & ANIMATED STAT COUNTERS
+           ==================================================================== -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-kicker">01. Overview</span>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+              2nd year CS student passionate about Machine Learning and Cyber Security.
+            </p>
+          </div>
+
+          <div class="glass-panel tilt-card about-card fade-in">
+            <!-- 3-4 Sentences strictly based on user information -->
+            <div class="about-prose">
+              <p>
+                I am a 2nd year Computer Science student at <strong>Sai University</strong>, passionate about learning <strong>Machine Learning</strong> and <strong>Cyber Security</strong>. I enjoy building projects across ML, data analytics and web development, and I contribute to open source.
+              </p>
+              <p>
+                I lead community and outreach for the <strong>HackWithIndia</strong> chapter.
+              </p>
+            </div>
+
+            <!-- Animated Stat Counters (CGPA, Projects, Open Source Contributions, Hackathons) -->
+            <div class="stats-grid" aria-label="Key Highlights">
+              <div class="stat-item">
+                <div class="stat-number" data-target="9.47" data-decimal="true">9.47</div>
+                <div class="stat-label">CGPA</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="5" data-decimal="false">5</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="3" data-decimal="false">3</div>
+                <div class="stat-label">Open Source Contributions</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="3" data-decimal="false">3</div>
+                <div class="stat-label">Hackathons</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           4. EDUCATION SECTION (Vertical Timeline with Glass Cards)
+           ==================================================================== -->
+      <section id="education">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-kicker">02. Academic Background</span>
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">
+              My academic background.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <!-- Item 1: Sai University -->
+            <div class="timeline-item fade-in">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="glass-panel tilt-card timeline-content">
+                <span class="timeline-badge">2025 &ndash; Present &middot; 2nd Year</span>
+                <h3 class="timeline-title">B.Tech in Computer Science</h3>
+                <p class="timeline-institution">
+                  Sai University, School of Computing and Data Science, 2nd Year
+                </p>
+                <div class="timeline-score">
+                  <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                  <span>CGPA: 9.47</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2: 12th Grade -->
+            <div class="timeline-item fade-in">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="glass-panel tilt-card timeline-content">
+                <span class="timeline-badge">Senior Secondary</span>
+                <h3 class="timeline-title">12th Grade</h3>
+                <p class="timeline-institution">Higher Secondary Education</p>
+                <div class="timeline-score">
+                  <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                  <span>Score: 95.1%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3: 10th Grade -->
+            <div class="timeline-item fade-in">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="glass-panel tilt-card timeline-content">
+                <span class="timeline-badge">Secondary School</span>
+                <h3 class="timeline-title">10th Grade</h3>
+                <p class="timeline-institution">Secondary School Certificate</p>
+                <div class="timeline-score">
+                  <i class="fa-solid fa-award" aria-hidden="true"></i>
+                  <span>Score: 90.2%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           5. SKILLS SECTION (Grouped Glass Cards + Chips)
+           ==================================================================== -->
+      <section id="skills">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-kicker">03. Technical Stack</span>
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">
+              Skills and technologies I work with.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Programming Languages -->
+            <div class="glass-panel tilt-card skill-card fade-in">
+              <div class="skill-card-header">
+                <i class="fa-solid fa-code skill-card-icon" aria-hidden="true"></i>
+                <h3 class="skill-card-title">Programming Languages</h3>
+              </div>
+              <div class="skill-chips-list">
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">C</span>
+              </div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="glass-panel tilt-card skill-card fade-in">
+              <div class="skill-card-header">
+                <i class="fa-solid fa-chart-pie skill-card-icon" aria-hidden="true"></i>
+                <h3 class="skill-card-title">Data Science</h3>
+              </div>
+              <div class="skill-chips-list">
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">Pandas</span>
+                <span class="skill-chip">NumPy</span>
+                <span class="skill-chip">Matplotlib</span>
+                <span class="skill-chip">Seaborn</span>
+                <span class="skill-chip">Plotly</span>
+                <span class="skill-chip">SQL</span>
+              </div>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="glass-panel tilt-card skill-card fade-in">
+              <div class="skill-card-header">
+                <i class="fa-solid fa-brain skill-card-icon" aria-hidden="true"></i>
+                <h3 class="skill-card-title">Machine Learning</h3>
+              </div>
+              <div class="skill-chips-list">
+                <span class="skill-chip">Supervised Machine Learning</span>
+              </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="glass-panel tilt-card skill-card fade-in">
+              <div class="skill-card-header">
+                <i class="fa-solid fa-layer-group skill-card-icon" aria-hidden="true"></i>
+                <h3 class="skill-card-title">Web Development</h3>
+              </div>
+              <div class="skill-chips-list">
+                <span class="skill-chip">HTML</span>
+                <span class="skill-chip">CSS</span>
+                <span class="skill-chip">JavaScript</span>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="glass-panel tilt-card skill-card fade-in">
+              <div class="skill-card-header">
+                <i class="fa-solid fa-screwdriver-wrench skill-card-icon" aria-hidden="true"></i>
+                <h3 class="skill-card-title">Tools</h3>
+              </div>
+              <div class="skill-chips-list">
+                <span class="skill-chip">Git</span>
+                <span class="skill-chip">GitHub</span>
+                <span class="skill-chip">n8n</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           6. PROJECTS SECTION (Filters + Featured CraftRoute + Tilt Cards)
+           ==================================================================== -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-kicker">04. Works</span>
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">
+              Projects and open source contributions.
+            </p>
+          </div>
+
+          <!-- Project Filter Buttons -->
+          <div class="project-filters fade-in" role="tablist" aria-label="Filter Projects">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ml">ML</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="open-source">Open Source</button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="projects-grid">
+            <!-- Project 1 (FEATURED): CraftRoute -->
+            <article class="glass-panel tilt-card project-card featured fade-in" data-category="web ml">
+              <div>
+                <div class="project-header">
+                  <span class="project-tag-kicker">Skill-Matching Platform</span>
+                  <span class="featured-badge">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    Featured Project
+                  </span>
+                </div>
+                <h3 class="project-title">CraftRoute</h3>
+                <p class="project-desc">
+                  A skill-matching platform. Users enter their skills and it recommends projects to work on, identifies missing skills, and builds a personalized roadmap to complete the project and learn those skills. It also sends the necessary emails automatically using n8n.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="project-tag">Web</span>
+                  <span class="project-tag">Automation</span>
+                  <span class="project-tag">n8n</span>
+                </div>
+                <a
+                  href="https://github.com/Hemasree1738/skill-craft-route.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link-btn"
+                  aria-label="View CraftRoute on GitHub"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2: PLAN-IT -->
+            <article class="glass-panel tilt-card project-card fade-in" data-category="web">
+              <div>
+                <div class="project-header">
+                  <span class="project-tag-kicker">Study Planner</span>
+                </div>
+                <h3 class="project-title">PLAN-IT</h3>
+                <p class="project-desc">
+                  A study planner website. It takes the subjects or topics you want to study and generates a timetable based on topic difficulty. Includes a to-do list and study music.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+                <a
+                  href="https://github.com/Hemasree1738/PLAN-IT.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link-btn"
+                  aria-label="View PLAN-IT on GitHub"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 3: freeCodeCamp Contribution -->
+            <article class="glass-panel tilt-card project-card fade-in" data-category="open-source">
+              <div>
+                <div class="project-header">
+                  <span class="project-tag-kicker">Open Source</span>
+                </div>
+                <h3 class="project-title">freeCodeCamp Contribution</h3>
+                <p class="project-desc">
+                  Open source contribution to freeCodeCamp.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="project-tag">Open Source</span>
+                  <span class="project-tag">Git</span>
+                </div>
+                <a
+                  href="https://github.com/Hemasree1738/freeCodeCamp.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link-btn"
+                  aria-label="View freeCodeCamp contribution on GitHub"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 4: ApexEdge -->
+            <article class="glass-panel tilt-card project-card fade-in" data-category="web">
+              <div>
+                <div class="project-header">
+                  <span class="project-tag-kicker">Static Website</span>
+                </div>
+                <h3 class="project-title">ApexEdge</h3>
+                <p class="project-desc">
+                  A static website built with HTML and CSS.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                </div>
+                <a
+                  href="https://github.com/Hemasree1738/ApexEdge.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link-btn"
+                  aria-label="View ApexEdge on GitHub"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 5: Voyara -->
+            <article class="glass-panel tilt-card project-card fade-in" data-category="web">
+              <div>
+                <div class="project-header">
+                  <span class="project-tag-kicker">Static Website</span>
+                </div>
+                <h3 class="project-title">Voyara</h3>
+                <p class="project-desc">
+                  A static website built with HTML and CSS.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                </div>
+                <a
+                  href="https://github.com/Hemasree1738/Voyara-Website.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link-btn"
+                  aria-label="View Voyara on GitHub"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- View all on GitHub CTA -->
+          <div class="projects-cta fade-in">
+            <a
+              href="https://github.com/Hemasree1738"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span>View all on GitHub</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           7. ACHIEVEMENTS & CERTIFICATIONS SECTION
+           ==================================================================== -->
+      <section id="achievements">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-kicker">05. Recognition</span>
+            <h2 class="section-title">Achievements &amp; Certifications</h2>
+            <p class="section-subtitle">
+              My achievements and certifications.
+            </p>
+          </div>
+
+          <div class="achievements-grid">
+            <!-- Achievements Column -->
+            <div class="fade-in">
+              <h3 class="achievements-column-title">
+                <i class="fa-solid fa-trophy neon-text-magenta" aria-hidden="true"></i>
+                <span>Achievements</span>
+              </h3>
+              <div class="achievements-list">
+                <!-- Highlighted First Achievement with extra glow -->
+                <div class="glass-panel tilt-card achievement-card highlight-achievement">
+                  <div class="achievement-icon">
+                    <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="achievement-role">Runner Up: Concert'26</h4>
+                    <p class="achievement-details">
+                      A national-level hackathon conducted by Anna University
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass-panel tilt-card achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="achievement-role">Participant: Ctrl C + Ctrl V</h4>
+                    <p class="achievement-details">
+                      An internal hackathon conducted by the FOSS Club at Sai University
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass-panel tilt-card achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="achievement-role">Participant: Mantra Ignite Hackathon</h4>
+                    <p class="achievement-details">
+                      An internal hackathon at Sai University
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications Column -->
+            <div class="fade-in">
+              <h3 class="achievements-column-title">
+                <i class="fa-solid fa-certificate neon-text-cyan" aria-hidden="true"></i>
+                <span>Certifications</span>
+              </h3>
+              <div class="certs-list">
+                <div class="glass-panel tilt-card cert-card">
+                  <div class="cert-icon">
+                    <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="cert-name">Supervised Machine Learning</h4>
+                    <p class="cert-issuer">by Andrew Ng (Coursera)</p>
+                  </div>
+                </div>
+
+                <div class="glass-panel tilt-card cert-card">
+                  <div class="cert-icon">
+                    <i class="fa-solid fa-satellite" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="cert-name">Winter Training Programme on Advanced Drone Technology</h4>
+                    <p class="cert-issuer">Indian Space Academy</p>
+                  </div>
+                </div>
+
+                <div class="glass-panel tilt-card cert-card">
+                  <div class="cert-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="cert-name">AI Tools Workshop</h4>
+                    <p class="cert-issuer">Be10X</p>
+                  </div>
+                </div>
+
+                <div class="glass-panel tilt-card cert-card">
+                  <div class="cert-icon">
+                    <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="cert-name">Certifications on Emerging Tools</h4>
+                    <p class="cert-issuer">Mantra</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           8. EXPERIENCE & LEADERSHIP SECTION
+           ==================================================================== -->
+      <section id="experience">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-kicker">06. Community</span>
+            <h2 class="section-title">Experience &amp; Leadership</h2>
+            <p class="section-subtitle">
+              My experience and leadership roles.
+            </p>
+          </div>
+
+          <div class="experience-grid">
+            <!-- Leadership Role -->
+            <div class="glass-panel tilt-card exp-card fade-in">
+              <div class="exp-header">
+                <div class="exp-icon">
+                  <i class="fa-solid fa-users" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h3 class="exp-title">Community and Outreach Lead</h3>
+                  <div class="exp-org">HackWithIndia Chapter</div>
+                </div>
+              </div>
+              <p class="exp-body">
+                Leading community and outreach for the HackWithIndia chapter.
+              </p>
+            </div>
+
+            <!-- Open Source Contributor -->
+            <div class="glass-panel tilt-card exp-card fade-in">
+              <div class="exp-header">
+                <div class="exp-icon">
+                  <i class="fa-solid fa-code-pull-request" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h3 class="exp-title">Open Source Contributor</h3>
+                  <div class="exp-org">Open Source</div>
+                </div>
+              </div>
+              <p class="exp-body">
+                Contributed to three open source repositories: freeCodeCamp, Awesome Python and First Contributions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           9. CONTACT SECTION (Interactive Form, Copy Email & Large Social Buttons)
+           ==================================================================== -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-kicker">07. Connect</span>
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">
+              Feel free to reach out via email or connect on my profiles below.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Left: Contact Details & Big Social Buttons -->
+            <div class="glass-panel tilt-card contact-info-card fade-in">
+              <div>
+                <h3 class="contact-info-title">Contact Information</h3>
+                <p class="contact-info-desc">
+                  Feel free to reach out via email or connect on my profiles below.
+                </p>
+
+                <!-- Copy Email Quick Action -->
+                <div class="email-copy-box">
+                  <span id="contact-email-text" class="email-address-text">
+                    hemasreerandhi1738@gmail.com
+                  </span>
+                  <button id="copy-email-btn" class="copy-btn" title="Copy email address to clipboard">
+                    <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                    <span>Copy email</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Big Hoverable Icon Buttons -->
+              <div class="contact-social-buttons" aria-label="Social connections">
+                <a
+                  href="mailto:hemasreerandhi1738@gmail.com"
+                  class="contact-social-btn"
+                >
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  <span>hemasreerandhi1738@gmail.com</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/hemasree-randhi-8777933b3/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-social-btn"
+                >
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/Hemasree1738"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-social-btn"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://www.hackerrank.com/profile/hemasree_r_29"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-social-btn"
+                >
+                  <i class="fa-brands fa-hackerrank" aria-hidden="true"></i>
+                  <span>HackerRank</span>
+                </a>
+                <a
+                  href="https://www.kaggle.com/hemasree38"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-social-btn"
+                >
+                  <i class="fa-brands fa-kaggle" aria-hidden="true"></i>
+                  <span>Kaggle</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Mailto Contact Form -->
+            <div class="glass-panel tilt-card contact-form-card fade-in">
+              <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    id="form-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Your Email</label>
+                  <input
+                    type="email"
+                    id="form-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="Your email"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message" class="form-label">Message</label>
+                  <textarea
+                    id="form-message"
+                    name="message"
+                    class="form-textarea"
+                    placeholder="Your message"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================================================================
+         10. FOOTER
+         ====================================================================== -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-copy">
+          <span>&copy; 2026 Hemasree Randhi</span>
+          <a href="mailto:hemasreerandhi1738@gmail.com" class="footer-email">
+            hemasreerandhi1738@gmail.com
+          </a>
+        </div>
+
+        <div class="footer-socials" aria-label="Footer social links">
+          <a
+            href="https://github.com/Hemasree1738"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon-btn"
+            aria-label="GitHub Profile"
+            title="GitHub"
+          >
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/hemasree-randhi-8777933b3/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon-btn"
+            aria-label="LinkedIn Profile"
+            title="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a
+            href="mailto:hemasreerandhi1738@gmail.com"
+            class="social-icon-btn"
+            aria-label="Send Email"
+            title="Email"
+          >
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.kaggle.com/hemasree38"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon-btn"
+            aria-label="Kaggle Profile"
+            title="Kaggle"
+          >
+            <i class="fa-brands fa-kaggle" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.hackerrank.com/profile/hemasree_r_29"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon-btn"
+            aria-label="HackerRank Profile"
+            title="HackerRank"
+          >
+            <i class="fa-brands fa-hackerrank" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Back-to-Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Toast Notification for Copy Email & Form Submission -->
+    <div id="toast-notification" class="toast-notification" role="status" aria-live="polite">
+      <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+      <span class="toast-message">Email copied to clipboard!</span>
+    </div>
+
+    <!-- Vanilla JavaScript File -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
